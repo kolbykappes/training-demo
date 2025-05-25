@@ -1,0 +1,565 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MTM Chain Link Security Fence Training</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: white;
+            min-height: 100vh;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+
+        .header {
+            background: #2c5530;
+            color: white;
+            padding: 1rem;
+            text-align: center;
+        }
+
+        .progress-bar {
+            background: #ddd;
+            height: 8px;
+            margin-bottom: 1rem;
+        }
+
+        .progress-fill {
+            background: #4CAF50;
+            height: 100%;
+            transition: width 0.3s ease;
+        }
+
+        .content-section {
+            display: none;
+            padding: 2rem;
+            min-height: 500px;
+        }
+
+        .content-section.active {
+            display: block;
+        }
+
+        .section-title {
+            color: #2c5530;
+            margin-bottom: 1rem;
+            border-bottom: 3px solid #4CAF50;
+            padding-bottom: 0.5rem;
+        }
+
+        .image-container {
+            text-align: center;
+            margin: 1rem 0;
+            border-radius: 8px;
+        }
+
+        .image-container img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 4px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+
+        .image-caption {
+            font-style: italic;
+            color: #666;
+            font-size: 0.9em;
+            margin-top: 0.5rem;
+        }
+
+        .key-points {
+            background: #f0f8f0;
+            border-left: 4px solid #4CAF50;
+            padding: 1rem;
+            margin: 1rem 0;
+        }
+
+        .safety-box {
+            background: #fff3cd;
+            border: 2px solid #ffc107;
+            padding: 1rem;
+            margin: 1rem 0;
+            border-radius: 8px;
+        }
+
+        .safety-box h3 {
+            color: #856404;
+        }
+
+        .navigation {
+            background: #f8f9fa;
+            padding: 1rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-top: 1px solid #ddd;
+        }
+
+        .nav-button {
+            background: #2c5530;
+            color: white;
+            border: none;
+            padding: 12px 24px;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 1rem;
+            transition: background 0.3s ease;
+        }
+
+        .nav-button:hover:not(:disabled) {
+            background: #1e3a21;
+        }
+
+        .nav-button:disabled {
+            background: #ccc;
+            cursor: not-allowed;
+        }
+
+        .section-counter {
+            font-weight: bold;
+            color: #666;
+        }
+
+        ul {
+            margin-left: 2rem;
+            margin-top: 0.5rem;
+        }
+
+        li {
+            margin-bottom: 0.5rem;
+        }
+
+        .vocab-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1rem;
+            margin: 1rem 0;
+        }
+
+        .vocab-item {
+            background: #f8f9fa;
+            padding: 1rem;
+            border-radius: 4px;
+            border-left: 4px solid #4CAF50;
+        }
+
+        .vocab-term {
+            font-weight: bold;
+            color: #2c5530;
+        }
+
+        @media (max-width: 600px) {
+            .container {
+                margin: 0;
+                box-shadow: none;
+            }
+            
+            .content-section {
+                padding: 1rem;
+            }
+            
+            .navigation {
+                padding: 1rem;
+            }
+            
+            .nav-button {
+                padding: 10px 16px;
+                font-size: 0.9rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>MTM Chain Link Security Fence Training</h1>
+            <p>Module 1: Know Your Fence Parts</p>
+        </div>
+
+        <div class="progress-bar">
+            <div class="progress-fill" id="progressFill"></div>
+        </div>
+
+        <!-- Section 1: Introduction -->
+        <div class="content-section active" data-section="1">
+            <h2 class="section-title">Welcome to MTM Fence Training</h2>
+            
+            <p>You're going to learn how to build chain link security fences. First, you need to know what all the parts are called.</p>
+            
+            <div class="image-container">
+                <img src="complete_fence_overview.jpg" alt="Complete fence overview showing full installation">
+                <div class="image-caption">Complete fence overview showing full installation</div>
+            </div>
+
+            <h3>What is a Chain Link Security Fence?</h3>
+            <p>A chain link fence is made of metal wire woven together to make a strong barrier. We add security features like barbed wire to make it even stronger.</p>
+
+            <div class="key-points">
+                <h4>The fence has three main jobs:</h4>
+                <ul>
+                    <li><strong>Keep people out</strong> who shouldn't be there</li>
+                    <li><strong>Keep people in</strong> who need to stay inside</li>
+                    <li><strong>Last a long time</strong> in all kinds of weather</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Section 2: Posts -->
+        <div class="content-section" data-section="2">
+            <h2 class="section-title">Posts - The Strong Foundation</h2>
+            
+            <h3>Terminal Posts</h3>
+            <p>Terminal Posts are the big, strong posts at corners and ends.</p>
+            <ul>
+                <li>These are like the legs of a table - they hold everything up</li>
+                <li>They're bigger and stronger than other posts</li>
+                <li>Gates attach to these posts</li>
+            </ul>
+
+            <div class="image-container">
+                <img src="terminal_post_labeled.jpg" alt="Terminal post (end post) clearly labeled">
+                <div class="image-caption">Terminal post (end post)</div>
+            </div>
+
+            <div class="image-container">
+                <img src="terminal_post_labeled2.jpg" alt="Terminal post (end post)">
+                <div class="image-caption">Terminal post (end post) by line post</div>
+            </div>
+
+            <h3>Intermediate Posts (Line Posts)</h3>
+            <p>Intermediate Posts (also called line posts) go between the terminal posts.</p>
+            <ul>
+                <li>These hold up the fence fabric along straight sections</li>
+                <li>They're smaller than terminal posts</li>
+                <li>They're spaced evenly along the fence line</li>
+            </ul>
+
+            <div class="image-container">
+                <img src="line_post_labeled.jpg" alt="Intermediate/line post clearly labeled">
+                <div class="image-caption">Intermediate/line post clearly labeled</div>
+            </div>
+        </div>
+
+        <!-- Section 3: Chain Link Fabric -->
+        <div class="content-section" data-section="3">
+            <h2 class="section-title">Chain Link Fabric - The Barrier</h2>
+            
+            <p>This is the metal mesh that makes the actual barrier.</p>
+            <ul>
+                <li>Made of steel wire woven in a diamond pattern</li>
+                <li>Comes in big rolls</li>
+                <li>Gets attached to the posts</li>
+            </ul>
+
+            <div class="image-container">
+                <img src="Chain-fabric-closeup.jpg" alt="Close-up of chain link fabric showing diamond pattern">
+                <div class="image-caption">Close-up of chain link fabric showing diamond pattern</div>
+            </div>
+
+            <div class="image-container">
+                <img src="chain-fabric-rolled.jpg" alt="Recently delivered chain link fabric">
+                <div class="image-caption">Recently delivered chain link fabric</div>
+            </div>
+
+            <div class="image-container">
+                <img src="chain-fabric-rolled2.jpg" alt="Chain fabric being hauled to work site">
+                <div class="image-caption">Chain fabric being hauled to work site</div>
+            </div>
+
+            <div class="key-points">
+                <h4>Remember:</h4>
+                <p>The chain link fabric is what actually stops people from getting through. It needs to be tight and secure to do its job properly.</p>
+            </div>
+        </div>
+
+        <!-- Section 4: Hardware Part 1 -->
+        <div class="content-section" data-section="4">
+            <h2 class="section-title">Hardware - The Connectors (Part 1)</h2>
+            
+            <p>These small parts hold everything together:</p>
+
+            <h3>Tension Bars</h3>
+            <p>Flat metal strips that go through the fence fabric</p>
+            <ul>
+                <li>Help attach fabric to terminal posts</li>
+                <li>Make the fence tight and strong</li>
+            </ul>
+
+            <div class="image-container">
+                <img src="chain-link-fence-tension-bar.jpg" alt="Tension bar being inserted in fence fabric">
+                <div class="image-caption">Tension bar being inserted in fence fabric</div>
+            </div>
+
+            <h3>Tension Bands</h3>
+            <p>Metal straps that go around terminal posts</p>
+            <ul>
+                <li>Hold the tension bars in place</li>
+                <li>Usually 5-6 bands per terminal post</li>
+            </ul>
+
+            <div class="image-container">
+                <img src="Tension_bar_diagram.jpg" alt="Tension bands on terminal post">
+                <div class="image-caption">Tension bands on terminal post</div>
+            </div>
+        </div>
+
+        <!-- Section 5: Hardware Part 2 -->
+        <div class="content-section" data-section="5">
+            <h2 class="section-title">Hardware - The Connectors (Part 2)</h2>
+            
+            <h3>Fence Ties</h3>
+            <p>Wire ties that connect the chain link fabric to the top rail.</p>
+            <ul>
+                <li>Secure the fence fabric to the top rail</li>
+                <li>Keep the fence tight and properly supported</li>
+				<li>Spaced evenly along the top rail</li>
+            </ul>
+
+            <div class="image-container">
+                <img src="Fence-ties.jpg" alt="Fence ties connecting fabric to top rail">
+                <div class="image-caption">Fence ties connecting fabric to top rail</div>
+            </div>
+
+            <h3>Barbed Wire Arms</h3>
+            <p>Metal brackets that go on top of posts instead of caps.</p>
+            <ul>
+                <li>Hold three strands of barbed wire</li>
+                <li>Support a spool of razor wire</li>
+                <li>Add extra security at the top of the fence</li>
+            </ul>
+
+            <div class="image-container">
+                <img src="Barbed-wire-arms.jpg" alt="Barbed wire arms on terminal post">
+                <div class="image-caption">Barbed wire arms on terminal post</div>
+            </div>
+
+        </div>
+
+        <!-- Section 6: Top Rail and Tension Wire -->
+        <div class="content-section" data-section="6">
+            <h2 class="section-title">Top Rail & Tension Wire</h2>
+            
+            <h3>Top Rail - The Top Support</h3>
+            <p>Metal pipe that runs along the top of the fence.</p>
+            <ul>
+                <li>Gives the fence extra strength</li>
+                <li>Keeps the top from sagging</li>
+                <li>Connects from post to post</li>
+            </ul>
+
+            <div class="image-container">
+                <img src="Top-rails.jpg" alt="Top rail installation">
+                <div class="image-caption">Top rail installation</div>
+            </div>
+
+            <h3>Tension Wire - The Bottom Support</h3>
+            <p>Strong wire that runs along the bottom of the fence.</p>
+            <ul>
+                <li>Keeps small animals from getting under</li>
+                <li>Makes the bottom of the fence tight</li>
+                <li>Usually about 6 inches off the ground</li>
+            </ul>
+
+            <div class="image-container">
+                <img src="Tension_wire.jpg" alt="Tension wire at bottom of fence">
+                <div class="image-caption">Tension wire at bottom of fence</div>
+            </div>
+        </div>
+
+        <!-- Section 7: How It Works Together -->
+        <div class="content-section" data-section="7">
+            <h2 class="section-title">How It All Works Together</h2>
+            
+            <p>Think of building a fence like building with blocks:</p>
+
+            <div class="key-points">
+                <ol>
+                    <li> <strong>Posts go in first</strong> - like setting up the frame</li>
+                    <li> <strong>Top rail connects the posts</strong> - like putting a roof on</li>
+                    <li> <strong>Fence fabric gets attached</strong> - like putting up walls</li>
+                    <li> <strong>Hardware holds it all together</strong> - like using screws and bolts</li>
+                    <li> <strong>Tension wire finishes the bottom</strong> - like putting in a floor</li>
+                </ol>
+            </div>
+
+            <div class="image-container">
+                <img src="parts-of-chain-link-fence.jpg" alt="Step-by-step assembly diagram">
+                <div class="image-caption">Step-by-step assembly diagram</div>
+            </div>
+        </div>
+
+        <!-- Section 8: Vocabulary -->
+        <div class="content-section" data-section="8">
+            <h2 class="section-title">Basic Fence Words You Need to Know</h2>
+            
+            <div class="vocab-list">
+                <div class="vocab-item">
+                    <div class="vocab-term">Post</div>
+                    <div>The vertical poles that hold up the fence</div>
+                </div>
+                <div class="vocab-item">
+                    <div class="vocab-term">Fabric</div>
+                    <div>The chain link mesh</div>
+                </div>
+                <div class="vocab-item">
+                    <div class="vocab-term">Hardware</div>
+                    <div>All the small metal parts that connect things</div>
+                </div>
+                <div class="vocab-item">
+                    <div class="vocab-term">Rail</div>
+                    <div>The horizontal pipe at the top</div>
+                </div>
+                <div class="vocab-item">
+                    <div class="vocab-term">Wire</div>
+                    <div>The tension wire at the bottom</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Section 9: Quality and Safety -->
+        <div class="content-section" data-section="9">
+            <h2 class="section-title">Quality Standards</h2>
+            
+            <h3>Quality Basics</h3>
+            <p>Every fence part must be:</p>
+            <ul>
+                <li><strong>Straight</strong> - Not crooked or bent</li>
+                <li><strong>Tight</strong> - Not loose or wobbly</li>
+                <li><strong>Secure</strong> - Won't come apart</li>
+                <li><strong>Even</strong> - Same spacing and height</li>
+            </ul>
+
+            <div class="image-container">
+                <img src="Proper-post-alignment.jpg" alt="Good vs. bad fence installation comparison">
+                <div class="image-caption">Good fence installation</div>
+            </div>
+			
+			<div class="image-container">
+                <img src="Improper-post-alignment.jpg" alt="Good vs. bad fence installation comparison">
+                <div class="image-caption">Bad fence installation</div>
+            </div>
+
+        </div>
+
+        <!-- Section 10: Summary -->
+        <div class="content-section" data-section="10">
+            <h2 class="section-title">Summary</h2>
+            
+            <div class="key-points">
+                <h4>Key Points to Remember:</h4>
+                <ul>
+                    <li>✓ <strong>Terminal posts</strong> are big and strong - they go at corners and ends</li>
+                    <li>✓ <strong>Line posts</strong> are smaller - they go in straight sections</li>
+                    <li>✓ <strong>Chain link fabric</strong> is the mesh that makes the barrier</li>
+                    <li>✓ <strong>Hardware</strong> connects everything together</li>
+                    <li>✓ <strong>Top rail</strong> and <strong>tension wire</strong> add strength</li>
+                    <li>✓ Everything must be <strong>straight, tight, secure, and even</strong></li>
+                </ul>
+            </div>
+
+            <div class="image-container">
+                <img src="parts-of-chain-link-fence.jpg" alt="Complete labeled fence diagram as summary">
+                <div class="image-caption">Complete labeled fence diagram as summary</div>
+            </div>
+			
+			<div class="image-container">
+                <img src="complete_fence_overview.jpg" alt="Complete fence overview showing full installation">
+                <div class="image-caption">Complete fence overview showing full installation</div>
+            </div>
+
+
+            <div style="text-align: center; margin-top: 2rem; padding: 2rem; background: #e8f5e8; border-radius: 8px;">
+                <h3 style="color: #2c5530;">Training Complete!</h3>
+                <p>You're now ready to take the <a href="https://form.typeform.com/to/AMef5VnX">knowledge check quiz</a>.</p>
+            </div>
+        </div>
+
+        <div class="navigation">
+            <button class="nav-button" id="prevBtn" onclick="changeSection(-1)">← Previous</button>
+            <span class="section-counter">
+                Section <span id="currentSection">1</span> of <span id="totalSections">10</span>
+            </span>
+            <button class="nav-button" id="nextBtn" onclick="changeSection(1)">Next →</button>
+        </div>
+    </div>
+
+    <script>
+        let currentSection = 1;
+        const totalSections = 10;
+
+        function updateProgress() {
+            const progress = (currentSection / totalSections) * 100;
+            document.getElementById('progressFill').style.width = progress + '%';
+        }
+
+        function updateNavigation() {
+            const prevBtn = document.getElementById('prevBtn');
+            const nextBtn = document.getElementById('nextBtn');
+            const currentSectionSpan = document.getElementById('currentSection');
+
+            prevBtn.disabled = currentSection === 1;
+            nextBtn.disabled = currentSection === totalSections;
+            
+            if (currentSection === totalSections) {
+                nextBtn.textContent = 'Complete ✓';
+            } else {
+                nextBtn.textContent = 'Next →';
+            }
+
+            currentSectionSpan.textContent = currentSection;
+        }
+
+        function showSection(sectionNumber) {
+            // Hide all sections
+            const sections = document.querySelectorAll('.content-section');
+            sections.forEach(section => section.classList.remove('active'));
+
+            // Show current section
+            const currentSectionElement = document.querySelector(`[data-section="${sectionNumber}"]`);
+            if (currentSectionElement) {
+                currentSectionElement.classList.add('active');
+                window.scrollTo(0, 0);
+            }
+
+            updateProgress();
+            updateNavigation();
+        }
+
+        function changeSection(direction) {
+            const newSection = currentSection + direction;
+            if (newSection >= 1 && newSection <= totalSections) {
+                currentSection = newSection;
+                showSection(currentSection);
+            }
+        }
+
+        // Initialize
+        document.getElementById('totalSections').textContent = totalSections;
+        showSection(1);
+
+        // Keyboard navigation
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'ArrowLeft' && currentSection > 1) {
+                changeSection(-1);
+            } else if (e.key === 'ArrowRight' && currentSection < totalSections) {
+                changeSection(1);
+            }
+        });
+    </script>
+</body>
+</html>
